@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dependson-config/lib-buildable": ["libs/lib-buildable/src/index.ts"],
       "@dependson-config/lib1": ["libs/lib1/src/index.ts"]
     }
   },

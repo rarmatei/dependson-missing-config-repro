@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/lib-buildable",
+  "sourceRoot": "libs/lib-buildable/src",
+  "prefix": "dependson-config",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/lib-buildable"],
+      "options": {
+        "project": "libs/lib-buildable/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/lib-buildable/tsconfig.lib.prod.json"
+        },
+        "random-config": {
+          "tsConfig": "libs/lib-buildable/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lib-buildable"],
+      "options": {
+        "jestConfig": "libs/lib-buildable/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/lib-buildable/src/**/*.ts",
+          "libs/lib-buildable/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
