@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "lib1": "libs/lib1",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e"
   }
